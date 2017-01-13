@@ -56,6 +56,11 @@ char *SerializeItem(const ItemInst *inst, int16 slot_id_in, uint32 *length, uint
 #define S(field) "|%s"
 #define F(field) "|%f"
 #include "../common/patches/titanium_itemfields.h"
+#define I(field), item->field
+#define C(field), field
+#define S(field), item->field
+#define F(field), item->field
+#include "../common/patches/titanium_itemfields.h"
 			);
 
 		safe_delete_array(instance);
